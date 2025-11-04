@@ -7,13 +7,11 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.x-blue.svg?style=for-the-badge&logo=python" alt="Python 3.x">
   <img src="https://img.shields.io/badge/Technology-Sockets_&_Threading-green?style=for-the-badge" alt="Sockets & Threading">
-  <img src="https://img.shields.io/badge/GUI-Tkinter-orange?style=for-the-badge" alt="Tkinter">
-  <img src="https://img.shields.io/badge/License-MIT-4CAF50?style=for-the-badge" alt="MIT License">
 </p>
 
 <h2>Project Overview</h2>
 
-<p><strong>ChatPY</strong> is a classic client-server chat room application written entirely in Python. It uses the built-in <code>socket</code> module for networking, <code>threading</code> to handle multiple clients concurrently, and <code>tkinter</code> to provide a simple and functional graphical user interface (GUI) for the client.</p>
+<p><strong>ChatPY</strong> is a classic client-server chat room application written entirely in Python. It uses the built-in <code>socket</code> module for networking, <code>threading</code> to handle multiple clients concurrently.
 
 <hr>
 
@@ -41,17 +39,6 @@
   <li>This client-handling thread continuously listens for messages. When a message is received, the server's <code>broadcast()</code> function sends it to all other connected clients.</li>
   <li>If a client disconnects, their thread terminates, and a "left the chat" message is broadcast to the remaining users.</li>
 </ol>
-
-<h3>2. Client (<code>client.py</code>)</h3>
-<p>The client script provides the user-facing GUI.</p>
-<ol>
-  <li>It launches a small <code>tkinter</code> window to ask the user for a nickname.</li>
-  <li>After the nickname is submitted, it connects to the server and sends the nickname for registration.</li>
-  <li>It then opens the main chat window.</li>
-  <li>The client starts a new <strong>thread</strong> (<code>receive_thread</code>) whose only job is to listen for messages from the server and display them in the <code>ScrolledText</code> widget.</li>
-  <li>The main GUI thread is responsible for sending messages. When the user types a message and hits "Send" (or presses Enter), the <code>write_message()</code> function sends the formatted text to the server.</li>
-</ol>
-
 <hr>
 
 <h2>How to Run</h2>
@@ -89,6 +76,6 @@ cd sockets_chatpy
 <h2>File Structure</h2>
 <pre><code>sockets_chatpy/
 ├── server.py       # The multi-threaded chat server
-├── client.py       # The Tkinter-based GUI client
+├── client.py       # The client who connects to the server
 └── .gitignore      # Ignores Python cache files
 </code></pre>
