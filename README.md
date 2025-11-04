@@ -19,7 +19,6 @@
 
 <ul>
   <li><strong>Real-Time Group Chat:</strong> Messages sent by any client are broadcast to all other connected clients instantly.</li>
-  <li><strong>GUI Client:</strong> A user-friendly graphical interface built with <code>tkinter</code>, featuring a scrollable message display and a text input field.</li>
   <li><strong>Multi-Threaded Server:</strong> The server uses <code>threading</code> to manage each client connection separately, allowing it to handle multiple users simultaneously without blocking.</li>
   <li><strong>User Nicknames:</strong> Users are prompted for a nickname before joining the chat.</li>
   <li><strong>Join/Leave Notifications:</strong> The chat room is notified when a new user joins or an existing user disconnects.</li>
@@ -46,7 +45,6 @@
 <h3>Prerequisites</h3>
 <ul>
   <li><strong>Python 3.x</strong></li>
-  <li><strong>Tkinter:</strong> This is typically included with standard Python installations. If not, you may need to install it (e.g., <code>sudo apt-get install python3-tk</code> on Debian/Ubuntu).</li>
 </ul>
 
 <h3>1. Clone the repository</h3>
